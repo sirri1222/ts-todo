@@ -16,7 +16,13 @@ export const AppTitle = styled.h1`
   text-align: center;
   padding: 30px 0;
   font-size: 30px;
-  color: hotpink;
+  color: #000;
+  margin-right: 20px;
+`;
+// 로그아웃 버튼
+export const logout = styled.div`
+  text-align: right;
+
 `;
 
 // 입력창

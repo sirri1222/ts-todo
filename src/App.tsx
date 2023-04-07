@@ -41,16 +41,18 @@ function App({ states, callBacks, callBacksFireBase, userLogin }: propsType) {
     <BrowserRouter>
       <css.Wrapper className="wrap">
         <css.Inner className="inner">
+        {userLogin && (
+              <css.logout>
+                <Button type="primary" danger  onClick={callBacksFireBase.fbLogout}>로그아웃</Button>
+                <Button type="primary" danger onClick={showModal}>회원탈퇴</Button>
+              </css.logout>
+            )}
           <css.AppTitle>
             <FormOutlined />
             TodoList App
-            {userLogin && (
-              <>
-                <Button onClick={callBacksFireBase.fbLogout}>로그아웃</Button>
-                <Button onClick={showModal}>회원탈퇴</Button>
-              </>
-            )}
+           
           </css.AppTitle>
+        
         </css.Inner>
         {/* 라우팅 영역 */}
         <Routes>
