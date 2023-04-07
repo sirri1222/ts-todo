@@ -15,6 +15,8 @@ type propsType = {
 };
 
 const TodoEdit = ({ states, callBacks }: propsType) => {
+  const path = process.env.PUBLIC_URL;
+
   const [form] = Form.useForm();
   // navigate 로 전달된 uid 를 활용
   const { uid } = useParams();
@@ -104,7 +106,7 @@ const TodoEdit = ({ states, callBacks }: propsType) => {
           name="date"
           rules={[{ required: true, message: "날짜를 입력하세요." }]}
         >
-          <DatePicker style={{ width: "100%" }} />
+          <DatePicker style={{ width: "100%" }} disabled />
         </Form.Item>
         {/* 스티커 선택 */}
         <Form.Item
@@ -113,10 +115,34 @@ const TodoEdit = ({ states, callBacks }: propsType) => {
           rules={[{ required: true, message: "스티커를 선택하세요." }]}
         >
           <Radio.Group>
-            <Radio value={"1"}>A</Radio>
-            <Radio value={"2"}>B</Radio>
-            <Radio value={"3"}>C</Radio>
-            <Radio value={"4"}>D</Radio>
+            <Radio value={"1"}>
+              <img
+                src={`${path}/icon/icon1.png`}
+                alt="날씨"
+                style={{ width: 30, height: 30 }}
+              />
+            </Radio>
+            <Radio value={"2"}>
+              <img
+                src={`${path}/icon/icon2.png`}
+                alt="날씨"
+                style={{ width: 30, height: 30 }}
+              />
+            </Radio>
+            <Radio value={"3"}>
+              <img
+                src={`${path}/icon/icon3.png`}
+                alt="날씨"
+                style={{ width: 30, height: 30 }}
+              />
+            </Radio>
+            <Radio value={"4"}>
+              <img
+                src={`${path}/icon/icon4.png`}
+                alt="날씨"
+                style={{ width: 30, height: 30 }}
+              />
+            </Radio>
           </Radio.Group>
         </Form.Item>
         {/* 내용 */}

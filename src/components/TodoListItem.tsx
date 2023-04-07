@@ -44,7 +44,7 @@ const TodoListItem = (props: propsType) => {
   return (
     <>
       <List.Item>
-        <Space style={!props.todoItem.done ? lineThrough : {} }>
+        <Space style={props.todoItem.done ? lineThrough : {}}>
           {props.todoItem.title}
           {props.todoItem.body}
           {props.todoItem.date}

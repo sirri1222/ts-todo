@@ -57,9 +57,13 @@ const TodoList = ({
 
   return (
     <css.TodoListWrap>
-      <Button type="primary" danger onClick={() => showModal}>
-        Delete
-      </Button>
+      {todoList.length > 0 ? (
+        <Button type="primary" danger onClick={showModal}>
+          Delete All
+        </Button>
+      ) : (
+        <span>등록된 내용이 없습니다.</span>
+      )}
       <List>{items}</List>
       <Modal
         title="Delete All Todos"
