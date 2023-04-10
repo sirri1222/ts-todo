@@ -110,8 +110,8 @@ const TodoEdit = ({ states, callBacks }: propsType) => {
         </Form.Item>
         {/* 스티커 선택 */}
         <Form.Item
-          label="Sticker"
-          name="sticker"
+          label="오늘 기분은?"
+          name="오늘 기분은?"
           rules={[{ required: true, message: "스티커를 선택하세요." }]}
         >
           <Radio.Group>
