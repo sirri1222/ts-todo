@@ -92,9 +92,9 @@ const TodoInput = (props: propsType) => {
         >
           {/* 제목 */}
           <Form.Item
-            label="Title"
-            name="title"
-            rules={[{ required: true, message: "Please input your username!" }]}
+            label="제목"
+            name="제목"
+            rules={[{ required: true, message: "제목을 입력하세요!" }]}
           >
             <Input
               size="large"
@@ -107,17 +107,17 @@ const TodoInput = (props: propsType) => {
           {/* 날짜 */}
           <Form.Item
             label="날짜"
-            name="date"
+            name="날짜"
             rules={[{ required: true, message: "날짜를 입력하세요." }]}
           >
             <DatePicker style={{ width: "100%" }} />
           </Form.Item>
           {/* 스티커 선택 */}
           <Form.Item
-            label="Sticker"
-            name="sticker"
+            label="오늘의 기분은?"
+            name="오늘의 기분은?"
             initialValue={"1"}
-            rules={[{ required: true, message: "스티커를 선택하세요." }]}
+            rules={[{ required: true, message: "기분을 선택하세요." }]}
           >
             <Radio.Group>
               <Radio value={"1"}>
@@ -152,7 +152,7 @@ const TodoInput = (props: propsType) => {
           </Form.Item>
           {/* 내용 */}
           <Form.Item
-            label="Contents"
+            label="내용"
             name="body"
             rules={[{ required: true, message: "내용을 입력하세요." }]}
           >
