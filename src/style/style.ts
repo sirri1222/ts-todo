@@ -22,6 +22,10 @@ export const AppTitle = styled.h1`
 // 로그아웃 버튼
 export const logout = styled.div`
   text-align: right;
+  display:flex;
+  justify-content:end;
+  gap:10px;
+  margin: 0px 0
 
 `;
 
@@ -37,4 +41,13 @@ export const TodoListWrap = styled.div`
   margin: 0 auto;
   padding-bottom: 50px;
   margin-bottom: 50px;
+`;
+// 아직 등록된내용이 없습니다. 
+export const TodoListContent = styled.div`
+ text-align:center;
+  margin: 30px auto;
+ border: 1px solid #000;
+ padding: 20px 0;
+ border-radius:20%:
+
 `;

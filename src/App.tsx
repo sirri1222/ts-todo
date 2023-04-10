@@ -43,8 +43,8 @@ function App({ states, callBacks, callBacksFireBase, userLogin }: propsType) {
         <css.Inner className="inner">
         {userLogin && (
               <css.logout>
-                <Button type="primary" danger  onClick={callBacksFireBase.fbLogout}>로그아웃</Button>
-                <Button type="primary" danger onClick={showModal}>회원탈퇴</Button>
+                <Button type="text" danger size="middle" onClick={callBacksFireBase.fbLogout}>로그아웃</Button>
+                <Button type="text" danger onClick={showModal}>회원탈퇴</Button>
               </css.logout>
             )}
           <css.AppTitle>

@@ -165,16 +165,16 @@ const TodoInput = (props: propsType) => {
           </Form.Item>
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Space align="center">
-              <Button htmlType="reset" danger icon={<UndoOutlined />}>
-                Reset
-              </Button>
               <Button
                 htmlType="submit"
-                type="primary"
+               type="text"
                 danger
                 icon={<EditOutlined />}
               >
-                Add
+                추가하기
+              </Button>
+              <Button htmlType="reset"   type="text" danger icon={<UndoOutlined />}>
+                다시적기
               </Button>
             </Space>
           </Form.Item>

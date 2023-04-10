@@ -4,7 +4,7 @@ import { List, Modal, Button } from "antd";
 import { TodoType } from "../AppContainer";
 import TodoListItem from "./TodoListItem";
 import { useState } from "react";
-
+import { CheckOutlined } from "@ant-design/icons";
 type propsType = {
   todoList: Array<TodoType>;
   updateTodo: (todo: TodoType) => void;
@@ -62,7 +62,13 @@ const TodoList = ({
           Delete All
         </Button>
       ) : (
-        <span>등록된 내용이 없습니다.</span>
+        <css.TodoListContent>
+          {" "}
+          <span>
+            <CheckOutlined />
+            아직 등록된 내용이 없습니다. 내용을 등록해 주세요.
+          </span>
+        </css.TodoListContent>
       )}
       <List>{items}</List>
       <Modal
